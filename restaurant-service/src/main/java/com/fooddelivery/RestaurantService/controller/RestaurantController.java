@@ -1,11 +1,14 @@
 package com.fooddelivery.RestaurantService.controller;
 
+import com.fooddelivery.RestaurantService.dto.RestaurantDTO;
 import com.fooddelivery.RestaurantService.entity.Restaurant;
 import com.fooddelivery.RestaurantService.repository.RestaurantRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/restaurants")

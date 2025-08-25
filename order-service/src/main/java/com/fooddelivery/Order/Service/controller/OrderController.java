@@ -6,7 +6,6 @@ import com.fooddelivery.Order.Service.dto.OrderResponseDTO;
 import com.fooddelivery.Order.Service.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
 
 @RestController
 @RequestMapping("/orders")

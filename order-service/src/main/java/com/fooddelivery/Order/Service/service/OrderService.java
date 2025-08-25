@@ -21,11 +21,11 @@ public class OrderService {
     public OrderResponseDTO placeOrder(OrderRequestDTO request) {
         // fetch user + restaurant info
         UserDTO user = userClient.getUserById(request.getUserId());
-        RestaurantDTO restaurant = restaurantClient.getRestaurantById(request.getRestaurantId());
+        RestaurantDTO restaurant = restaurantClient.getRestaurantsById(request.getRestaurantId());
 
         // create order response
         OrderResponseDTO response = new OrderResponseDTO();
-        response.setOrderId(System.currentTimeMillis());
+        response.setOrderId(String.valueOf(System.currentTimeMillis()));
         response.setUser(user);
         response.setRestaurant(restaurant);
         response.setItemName(request.getItemName());

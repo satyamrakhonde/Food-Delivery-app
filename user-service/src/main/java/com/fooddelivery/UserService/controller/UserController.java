@@ -1,11 +1,14 @@
 package com.fooddelivery.UserService.controller;
 
+import com.fooddelivery.UserService.dto.UserDTO;
 import com.fooddelivery.UserService.entity.Users;
 import com.fooddelivery.UserService.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/users")
