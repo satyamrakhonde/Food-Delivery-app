@@ -3,6 +3,8 @@ package com.fooddelivery.Order.Service.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -22,7 +24,10 @@ public class Order {
     @Column(nullable = false)
     private Long restaurantId;
 
-    @Column(nullable = false)
-    private String status;
+    @Enumerated(EnumType.STRING)
+    private OrderStatus status;
+
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<OrderItem> items;
 
 }
